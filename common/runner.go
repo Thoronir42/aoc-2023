@@ -43,6 +43,9 @@ func GetTask(task string) (AocTask, error) {
 
 		return t, nil
 	}
+	if task == "01" {
+		return aoc2023.TrebuchetTask{}, nil
+	}
 
 	return nil, errors.New("Unknown task: " + task)
 }
